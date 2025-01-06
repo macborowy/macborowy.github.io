@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, Heading, Text, Image, Link, IconButton, Container } from "@chakra-ui/react";
+import { SimpleGrid, Box, Heading, Text, Image, Link, IconButton, Container, Flex } from "@chakra-ui/react";
 import { FaInstagram } from "react-icons/fa";  // Add this import
 
 function App() {
@@ -25,9 +25,12 @@ function App() {
 function Header() {
   return (
     <Box mb={6}>
-      <Image src="logo.png" alt="Logo" maxW="300px" mx="auto" />
+      <Flex align="center" justify="center" mb={4}>
+        <Image src="logo-chmura.png" alt="Szkoła Chmury" maxW="60px" mr={3} />
+        <Heading color="whiteAlpha.900" mt={"5px"} fontSize={{ base: "3xl", md: "4xl" }} >Szkoła Chmury</Heading>
+      </Flex>
       <Heading color="whiteAlpha.900">Dzielimy się doświadczeniem pracy w chmurach!</Heading>
-      <Container maxW="10%" mx="auto" borderBottom="1px solid" borderColor="whiteAlpha.500" pb={4}/>
+      <Container maxW="10%" mx="auto" borderBottom="1px solid" borderColor="whiteAlpha.500" pb={4} />
     </Box>
   )
 }
