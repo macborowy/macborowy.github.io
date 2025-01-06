@@ -1,24 +1,54 @@
-import { SimpleGrid, Box, Heading, Text, Image, Link, IconButton, Container, Flex } from "@chakra-ui/react";
-import { FaInstagram } from "react-icons/fa";  // Add this import
+import { Box, Heading, Text, Image, Link, IconButton, Container, Flex } from "@chakra-ui/react";
+import { FaInstagram } from "react-icons/fa";
 
 function App() {
   return (
-    <SimpleGrid minHeight="100vh">
-      <Box
-        display="flex"
-        flexDirection="column"
+    <Box
+      minHeight="100vh"
+      // bg='linear-gradient(25deg, #060097 0%, #005EE9 60%, #0e06ba 95%) padding-box'
+      bgImage={`url(background.jpg)`}
+      bgSize="cover"
+      bgPosition="center"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Flex 
+        direction={{ base: "column", sm: "row" }}
         justifyContent="center"
-        minHeight="100vh"
-        textAlign="center"
-        bgGradient="to-br"
-        gradientFrom="blue.400"
-        gradientTo="blue.800"
+        alignItems="center"
+        maxWidth={"80%"}
       >
-        <Header />
-        <ProductDescription />
-        <Footer />
-      </Box>
-    </SimpleGrid>
+        <Box
+          order={{ sm: 1, md: 2 }}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          minHeight={{ base: "40vh", md: "100vh" }}
+        >
+          <Image
+            src="hero.png"
+            alt="Hero"
+            maxWidth={"90%"} />
+        </Box>
+
+        <Box
+          order={{ sm: 2, md: 1 }}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          minHeight={{ base: "60vh", md: "100vh" }}
+        >
+          <Header />
+          <ProductDescription />
+          <Footer />
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 
@@ -26,11 +56,11 @@ function Header() {
   return (
     <Box mb={6}>
       <Flex align="center" justify="center" mb={4}>
-        <Image src="logo-chmura.png" alt="Szkoła Chmury" maxW="60px" mr={3} />
-        <Heading color="whiteAlpha.900" mt={"5px"} fontSize={{ base: "3xl", md: "4xl" }} >Szkoła Chmury</Heading>
+        <Image src="logo-160x90.png" alt="Szkoła Chmury" maxW="60px" mr={3} />
+        <Heading color="whiteAlpha.900" fontSize={{ base: "3xl", md: "4xl" }} >Szkoła Chmury</Heading>
       </Flex>
       <Heading color="whiteAlpha.900">Dzielimy się doświadczeniem pracy w chmurach!</Heading>
-      <Container maxW="10%" mx="auto" borderBottom="1px solid" borderColor="whiteAlpha.500" pb={4} />
+      <Container maxW={"50%"} mx="auto" borderBottom="1px solid" borderColor="whiteAlpha.500" pb={4} />
     </Box>
   )
 }
