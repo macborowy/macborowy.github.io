@@ -13,3 +13,7 @@ build:
 	@echo "Removing website/build directory"
 	@rm -r website/build
 	@echo "Remove website/build directory complete!"
+
+serve:
+	@cd website && npm start
+

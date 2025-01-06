@@ -5,16 +5,13 @@ function App() {
   return (
     <Box
       minHeight="100vh"
-      // bg='linear-gradient(25deg, #060097 0%, #005EE9 60%, #0e06ba 95%) padding-box'
-      bgImage={`url(background.jpg)`}
-      bgSize="cover"
-      bgPosition="center"
+      bg='linear-gradient(25deg, #060097 0%, #005EE9 60%, #0e06ba 95%) padding-box'
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
     >
-      <Flex 
+      <Flex
         direction={{ base: "column", sm: "row" }}
         justifyContent="center"
         alignItems="center"
@@ -26,12 +23,10 @@ function App() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          minHeight={{ base: "40vh", md: "100vh" }}
+          minWidth={"50%"}
+          pb={6}
         >
-          <Image
-            src="hero.png"
-            alt="Hero"
-            maxWidth={"90%"} />
+          <Image src="hero-500x500.png" alt="Hero" />
         </Box>
 
         <Box
@@ -41,7 +36,7 @@ function App() {
           justifyContent="center"
           alignItems="center"
           textAlign="center"
-          minHeight={{ base: "60vh", md: "100vh" }}
+          minWidth={"50%"}
         >
           <Header />
           <ProductDescription />
@@ -68,7 +63,7 @@ function Header() {
 function ProductDescription() {
   return (
     <Box
-      maxW={{ base: "70%", sm: "70%", lg: "30%" }}
+      maxW={"70%"}
       mx="auto"
     >
       <Text fontSize={{ base: "sm", md: "sm" }} color="whiteAlpha.900" mb={4}>
@@ -104,7 +99,7 @@ function InstagramButton() {
 
 function Footer() {
   return (
-    <Box mt={12}>
+    <Box mt={12} mb={4}>
       <Text fontSize={{ base: "xs", md: "xs" }} color="whiteAlpha.700">
         Copyright ® 2025 Szkoła Chmury
       </Text>
